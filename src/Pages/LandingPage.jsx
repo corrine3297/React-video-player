@@ -1,79 +1,83 @@
-import React from 'react';
-import { Row, Col, Card } from 'react-bootstrap';
+import React from 'react'
+import { Card, Col, Row } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 
 function LandingPage() {
+  const navigateByUrl = useNavigate()
+
+  const navigate = ()=>{
+    navigateByUrl('/home')
+  }
   return (
-    <>
-      <Row className='mt-5 align-items-center justify-content-between'>
-        <Col>
-        </Col>
+    <div>
+      <Row className="mt-5 mb-5 align-items-center justify-content-between">
+        <Col></Col>
         <Col lg={4}>
-          <h3 className='mb-3'>Welcome to <span className='text-warning'>Media player</span></h3>
-          <p style={{ textAlign: 'justify' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, architecto perspiciatis sint dolorum animi pariatur dolor! Magni ut asperiores ducimus iure nesciunt sequi consequuntur, recusandae perferendis, distinctio illo, exercitationem hic.</p>
-          <button className='btn btn-info mt-5 fw-bolder'>Get started</button>
+          <h3 className='mb-3'>Welcome to <span className='text-warning'>Media Player</span></h3>
+          <p style={{textAlign:'justify'}}>dsahkjnadjnaslkdclaksnfkdnawsk adsnfjasdnjjnjnmnadsmfmsdnfmdsnfmsd
+          sdbfjsdbfjksandjfnjdkasnfj nsdjfndsjnsd dwsvsd sdfjsdnfjnsd ebdjfsnbfk bdsjnasdnalk 
+          dsnfjskn dsfnjsd nasdjna nsdfns nsdjflwe</p>
+          <button onClick={navigate} className='btn btn-primary mt-5 fw-bolder'>Get Started</button>
         </Col>
-        <Col>
-        </Col>
-        <Col lg={6} className=''>
-          <img className='img-fluid ms-5 ps-5' src="https://i.pinimg.com/originals/a1/77/df/a177dfc84703c31afa0d501ccf43fe4f.gif" alt="" />
+        <Col></Col>
+        <Col className='ps-5' lg={6}>
+          <img className='img-fluid ms-5' src="https://media.tenor.com/XHzHDo4uhWkAAAAd/kmt-kiaratakahashi.gif" alt="landing" />
         </Col>
       </Row>
-      <div className='container mt-5  mb-5 d-flex justify-content-center align-items-center flex-column'>
+      <div className="container mt-5 mb-5 d-flex justify-content-center align-items-center flex-column">
         <h3>Features</h3>
-        <div className='cards mt-5 d-flex align-items-center justify-content-between w-100'>
-          <Card style={{ width: '22rem' }}>
-            <Card.Img height={'300px'} width={'300px'} variant="top" src="https://www.thisiscolossal.com/wp-content/uploads/2014/03/120430.gif" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          <Card style={{ width: '22rem' }}>
-            <Card.Img height={'300px'} width={'300px'} variant="top" src="https://i.pinimg.com/originals/e2/e7/ae/e2e7ae69fb1c6f720756d908b3c6a6b8.gif" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          <Card style={{ width: '22rem' }}>
-            <Card.Img height={'300px'} width={'300px'} variant="top" src="https://i.pinimg.com/originals/e0/bc/e8/e0bce84bac8ca8856d8b234fb855b29e.gif" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-
-        </div>
+        <div className='w-100 d-flex cards justify-content-between'>
+      <Card className='p-3' style={{ width: '22rem' }}>
+      <Card.Img variant="top" height={'300px'} width={'300px'} src="https://media.tenor.com/MDENSxE43cIAAAAd/vinyl-music.gif" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+      </Card.Body>
+    </Card>
+    <Card className='p-3' style={{ width: '22rem' }}>
+      <Card.Img variant="top" height={'300px'} width={'300px'} src="https://media.tenor.com/SK-HnWyQik0AAAAd/johnny-depp-dior.gif" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+      </Card.Body>
+    </Card>
+    <Card className='p-3' style={{ width: '22rem' }}>
+      <Card.Img variant="top" height={'300px'} width={'300px'} src="https://media.tenor.com/N1rENlJhpOoAAAAd/playing-piano-toms-mucenieks.gif" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+      </Card.Body>
+    </Card>
+    </div>
       </div>
 
-      <div className='container mt-5 mb-5 d-flex justify-content-between w-100 border p-5 border-secondary rounded align-items-center'>
-        <div className='content' width={'400px'}>
-          <h3 className='text-waring mb-5'>Simple,fast Powerful</h3>
-          <h6><span className='fs-5 fw bolder'>Play everyting</span> : Lorem ipsum dolor sit amet  Delectus, quibusdam natus nisi quam iure quis beatae alias repellat, suscipit non dolores libero?</h6>
-
-          <h6><span className='fs-5 fw bolder'>Play everyting</span> : expedita odit ullam animi possimus. Delectus, quibusdam natus nisi quam iure quis beatae alias repellat, suscipit non dolores libero?</h6>
-
-          <h6><span className='fs-5 fw bolder'>Play everyting</span> : Culpa natus aut expedita odit ullam animi possimus. Delectus, quibusdam natus nisi quam iure quis beatae alias repellat, suscipit non dolores libero?</h6>
-
+      <div className="container mt-5 mb-5 d-flex justify-content-between w-100 border p-5 border-secondary rounded align-items-center">
+        <div className="content">
+          <h3 className="text-warning mb-5">Simple, Fast and Powerful</h3>
+          <h6><span className="fs-5 fw-bolder">Play Everything</span>: Lorem ipsum dolor sit amet 
+          consectetur adipisicing elit. Aut fugit aspernatur voluptatem nostrum quae debitis numquam at
+           sequi! Officia, eligendi.</h6>
+           <h6 className='mt-4'><span className="fs-5 fw-bolder">Manage Videos</span>: Lorem ipsum dolor sit amet 
+          consectetur adipisicing elit. Aut fugit aspernatur voluptatem nostrum quae debitis numquam at
+           sequi! Officia, eligendi.</h6>
+           <h6 className='mt-4'><span className="fs-5 fw-bolder">Watch History</span>: Lorem ipsum dolor sit amet 
+          consectetur adipisicing elit. Aut fugit aspernatur voluptatem nostrum quae debitis numquam at
+           sequi! Officia, eligendi.</h6>
         </div>
-        <div className='videe ms-5'>
-          <iframe width="553" height="280" src="https://www.youtube.com/embed/NDonh28AY3I" title="Coldplay - A Sky Full Of Stars (Lyrics)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+        <div className="video ms-5">
+        <iframe width="899" height="387" src="https://www.youtube.com/embed/tvqnKq-b_Eo" title="Jawan: Chaleya (Hindi song) | Shah Rukh Khan | Nayanthara | Atlee | Anirudh | Arijit S, Shilpa R" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-
       </div>
-
-    </>
-
+    </div>
   )
 }
 
